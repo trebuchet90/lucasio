@@ -6,7 +6,7 @@
 </div>
 
 <div id="gameDiv" style="display:none;">
-	<canvas id="ctx" width="900" height="900" style="border:1px solid #000000;"></canvas>
+	<canvas id="ctx" width="500" height="500" style="border:1px solid #000000;"></canvas>
 
 	<div id="chat-text" style="width:500px;height:100px;overflow-y:scroll">
 		<div>Hello!</div>
@@ -100,7 +100,7 @@
 			
 			var hpWidth = 30 * self.hp / self.hpMax;
 			ctx.fillStyle = 'red';
-			ctx.fillRect(x - hpWidth/2,y - 40,hpWidth,4);
+			ctx.fillRect(x - hpWidth/2,y - 80,hpWidth,4);
 			
 			var width = Img.player.width*2;
 			var height = Img.player.height*2;
