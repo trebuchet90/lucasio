@@ -39,11 +39,11 @@ type anything there are no accounts yet<br>
 	var socket = io();
 	
 	//sign
-//	var signDiv = document.getElementById('signDiv');
-//	var signDivUsername = document.getElementById('signDiv-username');
-//	var signDivSignIn = document.getElementById('signDiv-signIn');
-//	var signDivSignUp = document.getElementById('signDiv-signUp');
-//	var signDivPassword = document.getElementById('signDiv-password');
+	var signDiv = document.getElementById('signDiv');
+	var signDivUsername = document.getElementById('signDiv-username');
+	var signDivSignIn = document.getElementById('signDiv-signIn');
+	var signDivSignUp = document.getElementById('signDiv-signUp');
+	var signDivPassword = document.getElementById('signDiv-password');
 //	
 //	signDivSignIn.onclick = function(){
 //		socket.emit('signIn',{username:signDivUsername.value,password:signDivPassword.value});
@@ -64,8 +64,12 @@ type anything there are no accounts yet<br>
 //		} else
 //			alert("Sign up unsuccessul.");
 //	});
-
-    gameDiv.style.display = 'inline-block';
+    socket.emit('signIn',{username:signDivUsername.value,password:signDivPassword.value});
+    socket.on('signInResponse',function(data){
+	if(data.success){
+		signDiv.style.display = 'none';
+		gameDiv.style.display = 'inline-block';
+//    gameDiv.style.display = 'inline-block';
 
 	//chat
 	var chatText = document.getElementById('chat-text');
