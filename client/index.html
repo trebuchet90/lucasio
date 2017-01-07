@@ -1,11 +1,11 @@
-<div id="signDiv">
+<!-- <div id="signDiv">
 type anything there are no accounts yet<br>
 	Username: <input id="signDiv-username" type="text"></input><br>
 	Password: <input id="signDiv-password" type="password"></input>
 	<button id="signDiv-signIn">Sign In</button>
 	<button id="signDiv-signUp">Sign Up</button>
 </div>
-
+ -->
 <body>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -64,7 +64,8 @@ type anything there are no accounts yet<br>
 //		} else
 //			alert("Sign up unsuccessul.");
 //	});
-    socket.emit('signIn',{username:signDivUsername.value,password:signDivPassword.value});
+//    socket.emit('signIn',{username:signDivUsername.value,password:signDivPassword.value});
+    socket.emit('signIn',{username:'0',password:'0'});
     socket.on('signInResponse',function(data){
 	if(data.success){
 		signDiv.style.display = 'none';
